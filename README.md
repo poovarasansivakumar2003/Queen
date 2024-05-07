@@ -1,2 +1,2 @@
-# N Queens problem solution
-python language
+# programming problem solution
+solution by me
