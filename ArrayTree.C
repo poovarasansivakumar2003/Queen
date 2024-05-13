@@ -7,21 +7,21 @@ void main(){
     clrscr();
     a[0] = 0;
     printf("Tree Operation on arrays\n");
-    printf("Enter the value of root node: \n");
-    scanf("%d",&a[1]);
+    printf("\nEnter the value of root node: \n");
+    scanf("%d", &a[1]);
     if (a[1] == 0) {
 	printf("\nInvalid");
-    	return;
+	return;
     }
-    for (i = 1; i <= 7; i++){
+    for(i=1;i<=7;i++){
 	if (a[i] == 0)
 	    continue;
-	left: printf("\nIs there a left child node for %d node? YES 1 NO 0: ", a[i]);
+	left:printf("\nIs there a left child node for %d node? YES 1 NO 0: ", a[i]);
 	scanf("%d", &option);
 	if (option){
 	    printf("\nEnter left child node for %d node: ", a[i]);
-	    scanf("%d",&a[2*i]);
-	    if (a[i]<a[2*i] || ((2*i)>4 && (i%2)!=0 && a[2*i]<a[i/2])) {
+	    scanf("%d", &a[2*i]);
+	    if (a[i]<=a[2*i] || ((2*i)>4 && (i%2)!=0 && a[2*i]<a[i/2])) {
 		printf("\nInvalid input, please try again.\n");
 		goto left;
 	    }
@@ -30,11 +30,11 @@ void main(){
 	    a[2*i] = 0;
 	}
 	right: printf("\nIs there a right child node for %d node? YES 1 NO 0: ", a[i]);
-	scanf("%d",&option);
+	scanf("%d", &option);
 	if (option) {
 	    printf("\nEnter right child node for %d node: ", a[i]);
-	    scanf("%d",&a[2*i+1]);
-	    if (a[i] > a[2*i+1] || ((2*i+1)>4 && (i%2)==0 && a[2*i+1] > a[i/2])) {
+	    scanf("%d", &a[2*i+1]);
+	    if (a[i]>=a[2*i+1] || ((2*i+1)>4 && (i%2)==0 && a[2*i+1]>a[i/2])) {
 		printf("\nInvalid input, please try again.\n");
 		goto right;
 	    }
@@ -43,10 +43,11 @@ void main(){
 	    a[2*i+1] = 0;
 	}
     }
+
     printf("\nDo you want to display array? YES 1 NO 0: ");
     scanf("%d", &option);
     if (option) {
-	for (i = 0; i < 16; i++)
+	for(i= 0;i<16;i++)
 	    printf("%d\t", a[i]);
     }
     getch();
