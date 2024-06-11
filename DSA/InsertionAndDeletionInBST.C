@@ -57,11 +57,11 @@ void main() {
     printf("\nTree operations\n");
     printf("1.Insert\n2.Delete\n3.Display\n4.Exit\n");
     printf("Enter your choice: ");
-    scanf("%d", & option);
+    scanf("%d", &option);
     switch (option) {
     case 1:
       printf("Enter the data to be Inserted: ");
-      scanf("%d", & key);//Taking element to be inserted
+      scanf("%d", &key);//Taking element to be inserted
       root = insertion(root, key);
       getch();
       clrscr();
@@ -69,7 +69,7 @@ void main() {
     case 2:
       if(root!=NULL){//Checking whether it is a non-empty tree
 	printf("Enter the data to be Deleted: ");
-	scanf("%d", & key);//Taking element to be deleted;
+	scanf("%d", &key);//Taking element to be deleted;
 	root = deletion(root, key);
 	getch();
 	clrscr();
