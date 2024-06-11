@@ -75,11 +75,12 @@ void main() {
 	clrscr();
 	break;
       }
-      else
+      else{
        printf("Root Node is not inserted");
        getch();
        clrscr();
        break;
+      }
     case 3:
       printf("\nDisplay options\n");
       printf("1.Inorder\n2.Preorder\n3.Postorder\n");
