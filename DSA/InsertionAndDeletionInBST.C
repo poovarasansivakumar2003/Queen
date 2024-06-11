@@ -23,7 +23,7 @@ NODE deletion(NODE, int);
 
 //Inorder traversal
 void inorder(NODE root) {
-  if (root != 0) {
+  if (root != NULL) {
     inorder(root -> llink);
     printf("%d\t", root -> data);
     inorder(root -> rlink);
@@ -32,7 +32,7 @@ void inorder(NODE root) {
 
 //Preorder traversal
 void preorder(NODE root) {
-  if (root != 0) {
+  if (root != NULL) {
     printf("%d\t", root -> data);
     preorder(root -> llink);
     preorder(root -> rlink);
@@ -41,7 +41,7 @@ void preorder(NODE root) {
 
 //Postorder traversal
 void postorder(NODE root) {
-  if (root != 0) {
+  if (root != NULL) {
     postorder(root -> llink);
     postorder(root -> rlink);
     printf("%d\t", root -> data);
