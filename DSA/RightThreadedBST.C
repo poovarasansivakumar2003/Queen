@@ -8,8 +8,8 @@ Right Threaded Binary Search Tree
 //Structure for node
 struct node{
  int data;
- struct node*left;
- struct node*right;
+ struct node *left;
+ struct node *right;
  int RT;
 };
 
