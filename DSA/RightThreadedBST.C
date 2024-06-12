@@ -99,15 +99,14 @@ void insert_left(int item,NODE ptr){
 }
 
 void insert_right(int item,NODE ptr){
- NODE temp,newnode;
+ NODE newnode;
  newnode=(NODE)malloc(sizeof(struct node));
  newnode->left=0;
  newnode->data=item;
- temp=ptr->right;
- ptr->right=newnode;
- newnode->right=temp;
- ptr->RT=0;
+ newnode->right=ptr->right;
  newnode->RT=1;
+ ptr->right=newnode;
+ ptr->RT=0;
 }
 
 void inorder(NODE head){
