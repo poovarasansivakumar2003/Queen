@@ -110,16 +110,15 @@ void insert_right(int item,NODE ptr){
 }
 
 void inorder(NODE head){
- NODE temp;
+ NODE temp=head;
  if(head->left==0){
   printf("\n No nodes");
   return;
  }
- temp=head;
  while(1){
   temp=inorder_successor(temp);
   if(temp==head)
-  return;
+   return;
   printf("%d=>",temp->data);
  }
 }
