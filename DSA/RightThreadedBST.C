@@ -124,8 +124,7 @@ void inorder(NODE head){
 }
 
 NODE inorder_successor(NODE ptr){
- NODE temp;
- temp=ptr->right;
+ NODE temp=ptr->right;
  if(ptr->RT==1)
   return (temp);
  while(temp->left!=0)
