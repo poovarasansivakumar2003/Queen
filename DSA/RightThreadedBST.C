@@ -93,9 +93,9 @@ void insert_left(int item,NODE ptr){
  newnode=(NODE)malloc(sizeof(struct node));
  newnode->left=0;
  newnode->data=item;
- ptr->left=newnode;
  newnode->right=ptr;
  newnode->RT=1;
+ ptr->left=newnode;
 }
 
 void insert_right(int item,NODE ptr){
